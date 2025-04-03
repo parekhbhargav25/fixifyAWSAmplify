@@ -67,7 +67,7 @@ const CustomerProfile = () => {
         postalCode: formData.postalCode,
       };
   
-      const response = await axios.put("http://localhost:3000/users/update", payload);
+      const response = await axios.put("https://fixifyawsamplify-production.up.railway.app/users/update", payload);
   
       if (response.data.success) {
         // Update the user context with the new profile data.
