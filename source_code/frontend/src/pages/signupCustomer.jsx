@@ -79,7 +79,7 @@ export default function SignupCustomer() {
     if (!validateForm()) return;
 
     try {
-      const response = await axios.post("http://localhost:3000/signup", formData);
+      const response = await axios.post("https://fixifyawsamplify-production.up.railway.app/signup", formData);
       const { userId } = response.data;
       console.log("User registered:", response.data);
       navigate("/verify-customer", { state: { userId, email: formData.email } });
