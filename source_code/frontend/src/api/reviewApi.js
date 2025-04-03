@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:3000"
+const URL = "https://fixifyawsamplify-production.up.railway.app/"
 
 // export async function getReviewsByUserId(id) {
 //     const response = await axios.get(`${URL}/reviews/${id}`)
