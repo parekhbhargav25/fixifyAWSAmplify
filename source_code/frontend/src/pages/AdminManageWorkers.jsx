@@ -27,7 +27,7 @@ const ManageWorkers = () => {
 
   async function fetchData() {
     try {
-      const response = await fetch("http://localhost:3000/serviceProviders", {
+      const response = await fetch("https://fixifyawsamplify-production.up.railway.app/serviceProviders", {
         method: "GET",
         mode: "cors",
         headers: {
@@ -60,7 +60,7 @@ const ManageWorkers = () => {
     console.log("Verifying worker with ID:", workerId);
     const id = workerId.toString();
     try {
-      const response = await fetch(`http://localhost:3000/serviceProviders/${id}`, {
+      const response = await fetch(`https://fixifyawsamplify-production.up.railway.app/serviceProviders/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
