@@ -196,7 +196,7 @@ const AdminDashboard = () => {
 
   async function fetchDashboardData() {
     try {
-      const response = await fetch("http://localhost:3000/dashboardStats", {
+      const response = await fetch("https://fixifyawsamplify-production.up.railway.app/dashboardStats", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
