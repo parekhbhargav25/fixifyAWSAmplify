@@ -28,7 +28,7 @@ const ServiceProviderUpdateModal = ({ open, handleClose, worker }) => {
 
   const handleDelete = async (workerId) => {
     try {
-      const response = await fetch(`http://localhost:3000/users/${workerId}`, {
+      const response = await fetch(`https://fixifyaws-backend-new-production.up.railway.app/users/${workerId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const ServiceProviderUpdateModal = ({ open, handleClose, worker }) => {
       }
     };
     try {
-      const response = await fetch(`http://localhost:3000/users/${worker.user_id}`, {
+      const response = await fetch(`https://fixifyaws-backend-new-production.up.railway.app/users/${worker.user_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
