@@ -220,7 +220,7 @@ const OTPVerification = () => {
     setIsSubmitting(true);
     try {
       console.log("Sending to verify:", { userId, otp: otpValue });
-      const response = await axios.post("https://fixifyawsamplify-production.up.railway.app/verify-otp", { // Fixed URL
+      const response = await axios.post("fixifyaws-backend-new-production.up.railway.app/verify-otp", { // Fixed URL
         userId,
         otp: otpValue,
       });
@@ -244,7 +244,7 @@ const OTPVerification = () => {
 
   const handleResend = async () => {
     try {
-      await axios.post("https://fixifyawsamplify-production.up.railway.app/send-otp", { email });
+      await axios.post("fixifyaws-backend-new-production.up.railway.app/send-otp", { email });
       setError("");
       alert("OTP resent successfully!");
     } catch (err) {

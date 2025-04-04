@@ -58,7 +58,7 @@ const WorkerProfile = () => {
       const fetchReviews = async () => {
         try {
           // Adjust the endpoint as needed.
-          const response = await axios.get(`https://fixifyawsamplify-production.up.railway.app/reviews/worker-reviews/${user.id}`);
+          const response = await axios.get(`fixifyaws-backend-new-production.up.railway.app/reviews/worker-reviews/${user.id}`);
           if (response.data.success) {
             setReviews(response.data.reviews);
           }
