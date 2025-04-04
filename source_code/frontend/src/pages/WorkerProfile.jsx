@@ -58,7 +58,7 @@ const WorkerProfile = () => {
       const fetchReviews = async () => {
         try {
           // Adjust the endpoint as needed.
-          const response = await axios.get(`fixifyaws-backend-new-production.up.railway.app/reviews/worker-reviews/${user.id}`);
+          const response = await axios.get(`https://fixifyaws-backend-new-production.up.railway.app/reviews/worker-reviews/${user.id}`);
           if (response.data.success) {
             setReviews(response.data.reviews);
           }
@@ -92,7 +92,7 @@ const WorkerProfile = () => {
         postalCode: formData.postalCode,
       };
   
-      const response = await axios.put("https://fixifyawsamplify-production.up.railway.app/users/update", payload);
+      const response = await axios.put("https://fixifyaws-backend-new-production.up.railway.app/users/update", payload);
   
       if (response.data.success) {
         // Update both the AuthContext and local storage (if used)

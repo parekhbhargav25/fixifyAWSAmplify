@@ -33,7 +33,7 @@ const AdminDashboard = () => {
 
   async function fetchDashboardData() {
     try {
-      const response = await fetch("fixifyaws-backend-new-production.up.railway.app/dashboardStats", {
+      const response = await fetch("https://fixifyaws-backend-new-production.up.railway.app/dashboardStats", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });

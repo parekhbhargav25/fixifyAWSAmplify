@@ -180,7 +180,7 @@ const ServiceProviderSignup = () => {
       console.log("Signup payload:", payload);
 
       try {
-        const response = await fetch("fixifyaws-backend-new-production.up.railway.app/worker-signup", {
+        const response = await fetch("https://fixifyaws-backend-new-production.up.railway.app/worker-signup", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),

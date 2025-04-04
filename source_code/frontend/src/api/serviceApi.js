@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "fixifyaws-backend-new-production.up.railway.app"
+const URL = "https://fixifyaws-backend-new-production.up.railway.app"
 
 export async function getAllServices() {
     const response = await axios.get(`${URL}/services`)
