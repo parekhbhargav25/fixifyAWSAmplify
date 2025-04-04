@@ -3,6 +3,9 @@ import { Card, CardContent, Typography, Avatar, Box } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 
 const ReviewCard = ({ review }) => {
+  console.log('Review:', review);
+  console.log('Rating:', review.rating, typeof review.rating);
+  
   return (
     <Card sx={{ maxWidth: 350, m: 2, p: 2, borderRadius: 3, boxShadow: 5 }}>
       <CardContent>
@@ -28,5 +31,6 @@ const ReviewCard = ({ review }) => {
     </Card>
   );
 };
+
 
 export default ReviewCard;

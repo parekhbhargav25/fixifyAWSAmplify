@@ -12,14 +12,20 @@ import { Container, Grid, Typography } from "@mui/material";
 import ReviewCard from "../components/ReviewCard.jsx";
 
 
-
 function Home() {
   const [reviews, setReviews] = useState([]);
-    useEffect(() => {
-      getTopReviews().then((data) => {
-        setReviews(data);
+
+  useEffect(() => {
+    getTopReviews()
+      .then((data) => {
+        setReviews(Array.isArray(data) ? data : []);
+      })
+      .catch((error) => {
+        console.error("Error fetching reviews:", error);
+        setReviews([]);
       });
-    }, []);
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -32,16 +38,20 @@ function Home() {
           ⭐ Customer Reviews ⭐
         </Typography>
         <Grid container spacing={2} justifyContent="center">
-          {reviews.slice(0, 3).map((review, index) => (
-            <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
-              <ReviewCard review={review} />
-            </Grid>
-          ))}
+          {Array.isArray(reviews) && reviews.length > 0 ? (
+            reviews.slice(0, 3).map((review, index) => (
+              <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+                <ReviewCard review={review} />
+              </Grid>
+            ))
+          ) : (
+            <Typography>No reviews available</Typography>
+          )}
         </Grid>
       </Container>
       <Footer />
     </>
-  )
+  );
 }
 
 export default Home
